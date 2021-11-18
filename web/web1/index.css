@@ -41,7 +41,7 @@ a:hover {
 }
 .houfu {
   text-align: center;
-  font-size: 3.5rem;
+  font-size: 4.2rem;
   font-weight: bold;
   letter-spacing: 10px;
   line-height: 1.5;
@@ -54,7 +54,7 @@ a:hover {
   z-index: 10;
   padding: 40px 30px;
   height: 100%;
-  max-width: 1025px;
+  max-width: 1100px;
   margin-right: auto;
   margin-left: auto;
   margin-bottom: 80px;
@@ -214,8 +214,7 @@ footer .copyright {
 }
 .section {
   margin-top: 190px;
-  /* background: rgb(235, 235, 235, 0.7); */
-  padding: 30px;
+  padding: 30px 0;
   position: relative;
   z-index: 30;
 }
@@ -330,8 +329,8 @@ ul li {
   margin-right: 20px;
   margin-bottom: 0;
 }
-.housin ul li {
-  font-size: 2.4rem;
+.housin li {
+  font-size: 3rem;
   text-shadow: 2px 5px 2px #000;
   color: coral;
   line-height: 1.6;
