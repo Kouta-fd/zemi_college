@@ -1,22 +1,122 @@
+.cp {
+  background: #ffa500;
+}
+.bold {
+  font-weight: bold;
+}
+h1 {
+  letter-spacing: 4px;
+}
+.light {
+  color: #ffa500;
+}
 /* スライド1 */
+#section-1 h1 {
+  font-size: 7rem;
+}
 .name {
-  margin-top: 20px;
+  margin-top: 45px;
 }
 .name span {
   margin-right: 20px;
 }
 /* スライド2 */
+.agenda ul {
+  text-decoration: underline;
+  width: 440px;
+  margin: auto;
+  font-size: 3.5rem;
+}
+.agenda ul li {
+  margin-bottom: 40px;
+  text-align: left;
+}
 /* スライド3 */
+.flow {
+  height: 75vh;
+  margin: auto;
+  overflow-y: scroll;
+  box-shadow: 1px 2px 2px 2px gray inset;
+}
+.flow li {
+  letter-spacing: 7px;
+  font-weight: bold;
+  list-style: none;
+  border: solid 1px #e0e0e0;
+  padding: 50px;
+  display: block;
+  margin: 200px auto 200px;
+  width: 900px;
+  position: relative;
+  font-size: 5rem;
+  line-height: 1.6;
+}
+.flow .boldbottom {
+  border: 0;
+}
+.boldbottom::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 0;
+  right: 0;
+  width: 30px;
+  height: 130px;
+  background: red;
+  margin: auto;
+}
+.boldbottom::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 130px;
+  left: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  margin: auto;
+  border: 34px solid;
+  border-color: red transparent transparent transparent;
+}
 /* スライド4 */
+
 /* スライド5 */
 /* スライド6 */
 /* スライド7 */
+#section-7 .column p {
+  font-size: 2.2rem;
+}
 /* スライド8 */
+#section-8 .column p {
+  font-size: 2rem;
+}
 /* スライド9 */
 /* スライド10 */
+#section-10 h1 {
+  font-size: 9rem;
+}
 /* スライド11 */
 /* スライド12 */
 /* スライド13 */
 /* スライド14 */
+#section-15 .risou {
+  margin-top: 30px;
+  text-align: center;
+}
 
-
+/* スライド16 */
+#section-19 .wrap {
+  text-align: left;
+}
+#section-20 h2 {
+  font-size: 3.5rem;
+  text-align: left;
+}
+/* スライド16 */
+#section-21 h2 {
+  font-size: 4rem;
+}
+.width {
+  width: 60%;
+}
