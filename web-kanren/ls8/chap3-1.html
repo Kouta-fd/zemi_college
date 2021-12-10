@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS3アニメーション</title>
+  <style>
+    @keyframes animation1 {
+      0% {
+        margin-left: 0px; 
+        background-color: red;
+      }
+      100% {
+        margin-left: 200px;
+        background-color: grey;
+      }
+    }
+    @-webkit-keyframes animation1 {
+      0% {
+        margin-left: 0px; 
+        background-color: red;
+      }
+      100% {
+        margin-left: 200px;
+        background-color: grey;
+      }
+    }
+    #anime {
+      width: 100px;
+      height: 100px;
+      margin: 10px;
+      color: #fff;
+      animation-name: animation;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+      animation-timing-function: ease-in-out;
+      animation-duration: 1s;
+      -webkit-animation-name: animation;
+      -webkit-animation-iteration-count: infinite;
+      -webkit-animation-direction: alternate;
+      -webkit-animation-timing-function: ease-in-out;
+      -webkit-animation-duration: 1s;
+    }
+  </style>
+</head>
+<body>
+  <p id="anime">HTML5の絵本</p>
+</body>
+</html>

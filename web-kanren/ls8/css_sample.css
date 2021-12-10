@@ -1,0 +1,61 @@
+#box1 {
+  width: 350px;
+  height: 165px;
+  -webkit-border-image: url(border.png) 40/20px stretch;
+  -moz-border-bottom-colors: url(border.png) 40/20px stretch;
+  border-image: url(border.png) 40/20px stretch;
+}
+.btn1 {
+  width: 140px;
+  height: 45px;
+  background: #edc;
+  border: 2px solid #ccc;
+  border-color: #666;
+  font: 600px 20px/1 Meiryo;
+  color: #fff;
+  text-shadow: rgba(10,10,10,0.5) 1px 2px 2px;
+  text-align: center;
+  vertical-align: middle;
+  -webkit-border-radius: 40px;
+  border-radius: 40px;
+  -webkit-box-shadow: inset 0  -8px 12px 0 #f66, inset 0 -8px 10px 8px #c44,inset 0 -32px 18px -10px #d77;
+  box-shadow: inset 0  -8px 12px 0 #f66, inset 0 -8px 10px 8px #c44,inset 0 -32px 18px -10px #d77;
+}
+.btn:active {
+  text-shadow: rgb(255,255,255) 0px 0px 5px;
+  background: #eaa;
+}
+#shiori {
+  width: 95px;
+  height: 134px;
+  margin-top: 15px;
+  margin-left: 20px;
+}
+#shiori:hover {
+  -webkit-animation-duration: 5s;
+  -webkit-animation-name: animation;
+  animation-duration: 5s;
+  animation-name: animation;
+}
+@-webkit-keyframes animation {
+  50% {
+    margin-top: 15px; margin-left: 200px; transform: rotate(90deg);
+  }
+  75% {
+    margin-top: 15px; margin-left: 100px; transform: rotate(-90deg);
+  }
+  100% {
+    margin-top: 15px; margin-left: 20px;
+  }
+}
+@keyframes animation {
+  50% {
+    margin-top: 15px; margin-left: 200px; transform: rotate(90deg);
+  }
+  75% {
+    margin-top: 15px; margin-left: 100px; transform: rotate(-90deg);
+  }
+  100% {
+    margin-top: 15px; margin-left: 20px;
+  }
+}

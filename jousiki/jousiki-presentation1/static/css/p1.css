@@ -1,3 +1,8 @@
+section {
+  font-family: 'Murecho', sans-serif 
+  !important;
+  font-weight: 400;
+}
 .cp {
   background: #ffa500;
 }
@@ -23,7 +28,7 @@ h1 {
 /* スライド2 */
 .agenda ul {
   text-decoration: underline;
-  width: 440px;
+  width: 100%;
   margin: auto;
   font-size: 3.5rem;
 }
@@ -105,7 +110,7 @@ h1 {
   text-align: center;
 }
 
-/* スライド16 */
+/* スライド19 */
 #section-19 .wrap {
   text-align: left;
 }

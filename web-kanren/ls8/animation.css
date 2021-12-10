@@ -1,0 +1,25 @@
+.title-box {
+  min-width: 500px;
+  width: 500px;
+  min-height: 80px;
+  overflow: scroll;
+  border: solid 1px #000;
+  box-shadow: 3px 3px 2px red;
+  text-shadow: 3px 3px 2px red;
+  resize: both;
+}
+span{
+  display:inline-block;
+  width:500px;
+  margin:200px;
+  height:500px;
+  background:red;
+}
+#box{
+  -webkit-animation: 3s linear infinite rotation;
+  animation:3s linear infinite rotation;
+}
+@keyframes rotation{
+  0%{ transform:rotate(0); background-color: red; margin-left: 0;}
+  100%{ transform:rotate(360deg); background-color: #fff; margin-left: 700px; }
+}
