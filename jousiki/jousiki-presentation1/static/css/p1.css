@@ -4,6 +4,9 @@ section {
   color: #4a4a4a;
   letter-spacing: 5px;
 }
+.text-bold {
+  font-weight: bold;
+}
 .cp {
   background: #ffa500;
 }
@@ -21,6 +24,9 @@ h1 {
 }
 .text-l {
   text-align: left;
+}
+.text-center {
+  text-align: center;
 }
 /* スライド1 */
 #section-1 h1 {
@@ -148,10 +154,10 @@ h1 {
 #section-19 .wrap {
   text-align: left;
 }
-#section-20 h2 {
+/* #section-20 h2 {
   font-size: 3.5rem;
   text-align: left;
-}
+} */
 /* スライド16 */
 #section-21 h2 {
   font-size: 4rem;
@@ -177,7 +183,11 @@ h1 {
   margin: 40px 0 0 auto;
   display: block;
 }
-.img-graph,
+.img-graph {
+  width: 80%;
+  margin:20px auto;
+
+}
 .img-graph img {
   width: 100%;
 }
@@ -187,4 +197,34 @@ h1 {
 .problems li {
   font-size: 3rem;
   line-height: 1.6;
+}
+.kadai {
+  margin-top: 30px;
+}
+.inpact {
+  margin-top: 20px;
+  font-size: 3rem;
+}
+.btn {
+  border-radius: 30px;
+  border: 2px solid #ffa500;
+  background-color: #ffa500;
+  color: #4a4a4a;
+  padding: 20px 40px;
+  font-size: 5rem;
+  transition: 1s;
+}
+.btn:hover {
+  color: #4a4a4a;
+  background-color: #fff;
+}
+.img-sudan {
+  position: absolute;
+  right: 0;
+  top: -60px;
+  width: 30%;
+}
+.img-sudan img {
+  width: 100%;
+  border-radius: 20px;
 }
