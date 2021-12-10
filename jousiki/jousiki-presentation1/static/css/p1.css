@@ -1,7 +1,8 @@
 section {
-  font-family: 'Murecho', sans-serif 
-  !important;
+  font-family: "Murecho", sans-serif !important;
   font-weight: 400;
+  color: #4a4a4a;
+  letter-spacing: 5px;
 }
 .cp {
   background: #ffa500;
@@ -13,7 +14,13 @@ h1 {
   letter-spacing: 4px;
 }
 .light {
-  color: #ffa500;
+  color: #ff4500;
+}
+.flex {
+  display: flex;
+}
+.text-l {
+  text-align: left;
 }
 /* スライド1 */
 #section-1 h1 {
@@ -40,8 +47,14 @@ h1 {
 .flow {
   height: 75vh;
   margin: auto;
-  overflow-y: scroll;
+  overflow-x: scroll;
   box-shadow: 1px 2px 2px 2px gray inset;
+}
+.flow ul {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  overflow: auto;
 }
 .flow li {
   letter-spacing: 7px;
@@ -50,11 +63,13 @@ h1 {
   border: solid 1px #e0e0e0;
   padding: 50px;
   display: block;
-  margin: 200px auto 200px;
-  width: 900px;
+  margin: auto 50px;
   position: relative;
   font-size: 5rem;
   line-height: 1.6;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
 }
 .flow .boldbottom {
   border: 0;
@@ -63,11 +78,11 @@ h1 {
   content: "";
   display: block;
   position: absolute;
-  top: 0px;
-  left: 0;
+  top: 40px;
+  left: -30px;
   right: 0;
-  width: 30px;
-  height: 130px;
+  width: 130px;
+  height: 30px;
   background: red;
   margin: auto;
 }
@@ -75,17 +90,18 @@ h1 {
   content: "";
   display: block;
   position: absolute;
-  top: 130px;
-  left: 0;
-  right: 0;
+  top: 20px;
+  right: -60px;
   width: 0;
   height: 0;
   margin: auto;
   border: 34px solid;
-  border-color: red transparent transparent transparent;
+  border-color: transparent transparent transparent red;
 }
 /* スライド4 */
-
+.jisho p {
+  font-size: 2rem;
+}
 /* スライド5 */
 /* スライド6 */
 /* スライド7 */
@@ -97,15 +113,33 @@ h1 {
   font-size: 2rem;
 }
 /* スライド9 */
-/* スライド10 */
-#section-10 h1 {
-  font-size: 9rem;
+.a2 .title-s {
+  font-size: 7rem;
+  font-weight: bold;
 }
+/* スライド10 */
+
 /* スライド11 */
 /* スライド12 */
+.rp {
+  font-size: 7rem;
+  border-radius: 50px;
+  padding: 30px 80px;
+  color: #000;
+}
+.point.flex {
+  margin-top: 50px;
+  justify-content: space-around;
+}
+.p1 {
+  background-color: #eabf95;
+}
+.p2 {
+  background-color: 	#4e95dc;
+}
 /* スライド13 */
 /* スライド14 */
-#section-15 .risou {
+.risou {
   margin-top: 30px;
   text-align: center;
 }
@@ -124,4 +158,33 @@ h1 {
 }
 .width {
   width: 60%;
+}
+.flow1.img-wrap{
+  margin-top: 30px;
+  height: 70vh;
+}
+.flow1.img-wrap img {
+  height: 100%;
+}
+.current h3 {
+  font-size: 3.5rem;
+}
+.current .img-wrap {
+  width: 100%;
+}
+.current .img-wrap img {
+  width: 500px;
+  margin: 40px 0 0 auto;
+  display: block;
+}
+.img-graph,
+.img-graph img {
+  width: 100%;
+}
+.problems {
+  margin-top: 30px;
+}
+.problems li {
+  font-size: 3rem;
+  line-height: 1.6;
 }
