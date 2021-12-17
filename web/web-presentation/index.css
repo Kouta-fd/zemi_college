@@ -384,3 +384,20 @@ ul li {
   font-weight: bold;
   font-size: 2rem;
 }
+.btn-wrap {
+  margin-top: 100px;
+  text-align: center;
+}
+.btn {
+  border-radius: 30px;
+  border: 2px solid #ffa500;
+  background-color: #ffa500;
+  color: #4a4a4a;
+  padding: 20px 40px;
+  font-size: 2rem;
+  transition: 1s;
+}
+.btn:hover {
+  color: #4a4a4a;
+  background-color: #fff;
+}
