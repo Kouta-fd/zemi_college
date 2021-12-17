@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>サンプル</title>
+  <style>
+    #zone {
+      width: 200px;
+      height: 100px;
+      background-color: silver;
+    }
+    #dragitem {
+      color: red;
+      background-color: pink;
+      width: 100px;
+    }
+  </style>
+</head>
+<body>
+  <div id="dragitem" draggable="true">
+    旅するしおり
+  </div>
+  <p>
+    <textarea name="" id="zone" cols="30" rows="10"></textarea>
+  </p>
+  <script>
+    var ei=document.getElementById("dragitem");
+    var ez=document.getElementById("zone");
+    ei.ondragstart=function(event) {
+      event.dataTransfer.setData("Text",ei.innerHTML);
+    }
+    ez.ondragover = function(event) {
+      event.preventDefault();
+    }
+    ez.ondrop() = function(event) {
+      event.target.innerHTML = "";
+      var type = event.dataTransfer.type;
+      if(type) {
+        for(var i = 0; i<type.length; i++) {
+          var data = event.dataTransfer.getData(types[i]);
+          event.target.innerHTML+="{" + types[i] + "}" +data;
+        }
+      }
+      event.preventDefault();
+    }
+  </script>
+</body>
+</html>

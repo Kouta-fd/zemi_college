@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>課題　福田晃大</title>
+    <style>
+      #area {
+        border: solid 1px #000;
+        width: 200px;
+        height: 200px;
+      }
+    </style>
+    <script src="./shukudai.js"></script>
+  </head>
+  <body>
+    <h2>タグの意味づけ</h2>
+    <div itemscope itemtype="https://schema.org/Thing" class="tn-wrap">
+      <img
+        id="image"
+        draggable="true"
+        itemprop="image"
+        class="tn-image"
+        src="https://www.econ.doshisha.ac.jp/attach/page/ECONOMICS-PAGE-JA-190/43803/resize-file/miyazaki.jpg"
+        alt="宮崎先生の写真"
+      />
+      <p itemprop="name" class="tn">宮﨑先生</p>
+    </div>
+    <div>
+      <h2>マルチメディアコンテンツ</h2>
+      <audio src="" controls autoplay></audio>
+    </div>
+    <div>
+      <h2>Drag&Drop API</h2>
+      <div id="area"></div>
+    </div>
+    <div>
+      <h2>GeolocationAPI</h2>
+      <div id="result"></div>
+    </div>
+  </body>
+</html>

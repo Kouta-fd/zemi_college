@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="./kadai.js"></script>
+    <style>
+      .drag-erea {
+        padding: 180px 0;
+        width: 100%;
+        margin: 0 auto 20px;
+        background: #f6f6f6;
+        text-align: center;
+      }
+      .drag-erea.drag {
+        background: #f0f0f0;
+      }
+      .drag-erea input {
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="area" class="drag-erea">
+      <input id="file" name="fileupload" type="file" value="upload" />
+    </div>
+    <div>
+      <span class="fsize"></span>バイト
+    </div>
+  </body>
+</html>
