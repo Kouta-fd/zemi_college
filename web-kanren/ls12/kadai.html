@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <script src="./kadai.js"></script>
     <style>
       .drag-erea {
         padding: 180px 0;
@@ -25,8 +24,18 @@
     <div id="area" class="drag-erea">
       <input id="file" name="fileupload" type="file" value="upload" />
     </div>
-    <div>
-      <span class="fsize"></span>バイト
+    <div id="result">
+      
     </div>
+    <div>
+        <textarea name="memo" id="memo" cols="30" rows="10"></textarea>
+      <div>
+        <input id="save" type="button" value="保存" />
+      </div>
+      <div>
+        <input id="clear" type="button" value="削除" />
+      </div>
+    </div>
+    <script src="./kadai.js"></script>
   </body>
 </html>
