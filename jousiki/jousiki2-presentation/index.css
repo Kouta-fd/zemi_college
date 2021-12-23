@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  /* font-family: honoka-maru-gothic, sans-serif;
+  font-weight: 400;
+  font-style: normal; */
+  font-family: source-han-sans-japanese, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.5rem;
+  letter-spacing: 5px;
+  line-height: 1.4;
+  background: #50aaff;
+  color: #fff;
+}
+/* font */
+.dotfont {
+  font-family: ab-megadot9, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.red {
+  color: rgb(243, 75, 75);
+}
+.purple {
+  color: rgb(72, 230, 33);
+}
+.yellow {
+  color: #ebee4c;
+}
+h1 {
+  text-align: center;
+  letter-spacing: 5px;
+}
+h3 {
+  text-align: center;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+.title {
+  font-size: 7rem;
+  margin: 0 10px;
+}
+h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+.mb {
+  margin-bottom: 30px;
+}
+/* メインコンテンツ */
+.agenda ul {
+  padding-left: 40px;
+}
+.container {
+  max-width: 1025px;
+  margin: auto;
+  width: 80%;
+  padding: 0 30px;
+}
+section {
+  height: 100vh;
+  /* margin: 50px 0; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.top {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 60%;
+  margin: auto;
+}
+.list .img-wrap {
+  width: 20%;
+}
+.list .img-wrap img {
+  width: 100%;
+}
+/* 背景 */
+#snow-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+/* ===== 雪のスタイル ===== */
+.snow {
+  background-color: #fff; /* 雪の色 */
+  border-radius: 50%;
+  position: absolute;
+  animation: animate-snow 60s linear;
+}
+
+/* ===== 雪のアニメーション ===== */
+@keyframes animate-snow {
+  0% {
+    opacity: 0;
+    top: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    top: 100%;
+  }
+}
