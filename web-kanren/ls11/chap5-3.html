@@ -7,10 +7,16 @@ function draw(){
     var canvas = document.getElementById("canvas1");
     if(canvas.getContext){
         var cvs = canvas.getContext("2d");
-        cvs.strokeRect(50, 50, 150, 150);
+        cvs.beginPath();
+        cvs.moveTo(150,20);
+        cvs.lineTo(130,120);
+        cvs.lineTo(220,60);
+        cvs.lineTo(190,40);
+        cvs.lineTo(130,120);
+        cvs.lineTo(180,30);
+        cvs.closePath();
         cvs.fillStyle="#ee8888";
-        cvs.fillRect(75, 75, 100, 100);
-        cvs.clearRect(100, 100, 50, 50);
+        cvs.fill();
     }
 }
 </script>

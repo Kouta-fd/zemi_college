@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>しおり in canvas</title>
+    <script>
+      function draw(){
+        var canvas = document.getElementById("canvas1");
+        if(canvas.getContext){
+          var cvs = canvas.getContext("2d");
+          cvs.lineWidth=3;
+          //左腕
+          cvs.fillStyle="#ddaabb";
+          cvs.beginPath();
+          cvs.moveTo(258,210);
+          cvs.bezierCurveTo(285,250,320,240,270,260);
+          cvs.stroke ();
+          cvs.beginPath();
+          cvs.moveTo (270,260);
+          cvs.bezierCurveTo (265,280,285,300,260,295);
+          cvs.quadraticCurveTo (240,240,270,260);
+          cvs.fill ();
+          cvs.stroke ();
+         //身体
+          cvs.fillStyle="white";
+          cvs.beginPath();
+          cvs.moveTo (50,70);
+          cvs.bezierCurveTo (40,100,45,120,30,385);
+          cvs.bezierCurveTo (160,380,180,390,260,385);
+          cvs.bezierCurveTo (255,150,260,200,270,70);
+          cvs.bezierCurveTo (270,70,200,65, 50,70);
+          cvs.fill ();
+          cvs.stroke ();
+          //右眉
+          cvs.fillStyle="#aaaaaa";
+          cvs.beginPath ();
+          cvs.moveTo(55,135);
+          cvs.lineTo(55,150);
+          cvs.quadraticCurveTo (100,145,125,150);
+          cvs.quadraticCurveTo (130,145,128,135);
+          cvs.quadraticCurveTo (100,125,55,135);
+          cvs.fill();
+          cvs.stroke ();
+          //左眉
+          cvs.fillStyle="#aaaaaa";
+          cvs.beginPath ();
+          cvs.moveTo(162,135);
+          cvs.lineTo(165,150);
+          cvs.bezierCurveTo(175,145,240,135,245,130);
+          cvs.lineTo(245,115);
+          cvs.quadraticCurveTo(200,115,162,135);
+          cvs.fill();
+          cvs.stroke ();
+          //右目
+          cvs.beginPath();
+          cvs.arc (120,158,8,Math.PI*2,false);
+          cvs.stroke();
+          //左目
+          cvs.beginPath();
+          cvs.arc (178,158,8,Math.PI*2, false);
+          cvs.stroke ();
+          //口
+          cvs.beginPath();
+          cvs.moveTo (105,200);
+          cvs.quadraticCurveTo(140,215,190,200);
+          cvs.stroke ();
+          //右腕
+          cvs.fillStyle="#ddaabb";
+          cvs.moveTo (39,210);
+          cvs.lineTo (8,250);
+          cvs.quadraticCurveTo(8,260,30,270);
+          cvs.stroke ();
+          cvs.beginPath();
+          cvs.moveTo(30,270);
+          cvs.bezierCurveTo(65,280,20,320,15,290);
+          cvs.quadraticCurveTo (15,285,30,270);
+          cvs.fill ();
+          cvs.stroke ();
+          //リボンの穴
+          cvs.fillStyle="black";
+          cvs.beginPath();
+          cvs.arc (155,85,10,Math.PI*2, false);
+          cvs.stroke ();
+          cvs.beginPath();
+          cvs.arc (152,87,8,Math.PI*2,false);
+          cvs.fill ();
+          //リボン
+          cvs.fillStyle="#ffdddd";
+          cvs.beginPath();
+          cvs.moveTo(165,50);
+          cvs.quadraticCurveTo (190,40,200,33);
+          cvs.lineTo (190,20);
+          cvs.quadraticCurveTo (180,35,155,40);
+          cvs.closePath ();
+          cvs.fill ();
+          cvs.stroke ();
+          cvs.beginPath();
+          cvs.moveTo (145,90);
+          cvs.bezierCurveTo (220,50,110,50,175,10);
+          cvs.lineTo (162,3);
+          cvs.bezierCurveTo (95,70,200,30,145,90);
+          cvs.fill();
+          cvs.stroke ();
+        }
+      }
+    </script>
+</head>
+<body onload="draw (); ">
+  <canvas id="canvas1" width="300" height="390"></canvas>
+</body>
+</html>
+
+

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>canvasサンプル</title>
+<script>
+    function draw(){
+        var canvas = document.getElementById("canvas1");
+        if(canvas.getContext){
+            var cvs = canvas.getContext("2d");
+            img = new Image();
+            img.src="a.png";
+            img.onload = function(){cvs.drawImage(img, 0,0,300,200);}
+            cvs.beginPath();
+            cvs.arc(140,100,60,Math.PT*2,false);
+            cvs.stroke();
+            cvs.clip();
+        }
+    }
+</script>
+</head>
+<body onload="draw();">
+    <canvas id="canvas1" width="300" height="300">
+        canvasを表示できません。
+    </canvas>
+</body>
+<html>
+
+

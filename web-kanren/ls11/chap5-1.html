@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>canvasサンプル</title>
+<script>
+    function draw(){
+        var canvas = document.getElementById("canvas1");
+        if(canvas.getContext){
+            var cvs = canvas.getContext("2d");
+            cvs.strokeRect(50, 80, 100, 80);
+        }
+    }
+</script>
+</head>
+<body onload="draw();">
+    <canvas id="canvas1" width="300" height="300">
+        canvasを表示できません。
+    </canvas>
+</body>
+<html>

@@ -1,15 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <style>
-      #text {
-        height: 60px;
-        width: 100%;
-      }
-    </style>
+    <meta charset="utf-8" />
+    <title>canvasサンプル</title>
     <script>
       function draw() {
         var canvas = document.getElementById("canvas1");
@@ -17,32 +10,83 @@
           var now = new Date();
           var sec = now.getSeconds();
           var cvs = canvas.getContext("2d");
-          //ビーム
-          var w = 40;
-          setInterval(function() {
-            w = w +10;
-            cvs.fillRect(20, 10, w, 40);
-          },1000)
-          //体
+          cvs.clearRect(0, 0, canvas.width, canvas.height);
+          cvs.save();
+          cvs.beginPath();
+          cvs.fillRect(450, 250, 30 + sec * 20, 100);
+          cvs.closePath();
+          cvs.fillStyle = "red";
+          cvs.fill();
+          cvs.restore();
+          setTimeout("draw();", 2000);
+          cvs.beginPath();
+          cvs.moveTo(130, 300); 
+          cvs.lineTo(400, 300); 
+          cvs.lineTo(400, 300);
+          cvs.quadraticCurveTo(480, 325, 400, 350); 
+          cvs.lineTo(400, 350); 
+          cvs.lineTo(200, 360); 
+          cvs.lineTo(200, 360); 
+          cvs.lineTo(185, 400);
+          cvs.lineTo(185, 480);
+          cvs.lineTo(300, 500); 
+          cvs.quadraticCurveTo(300, 500, 300, 500); 
+          cvs.lineTo(310, 500); 
+          cvs.lineTo(270, 630);
+          cvs.lineTo(270, 630);
+          cvs.quadraticCurveTo(230, 650, 200, 600); 
+          cvs.lineTo(200, 600);
+          cvs.lineTo(240, 500);
+          cvs.lineTo(240, 550); 
+          cvs.lineTo(100, 530);
+          cvs.lineTo(100, 530);
+          cvs.lineTo(0, 600);
+          cvs.lineTo(0, 600);
+          cvs.lineTo(0, 500);
+          cvs.lineTo(0, 500);
+          cvs.lineTo(0, 500);
+          cvs.lineTo(0, 500); 
+          cvs.quadraticCurveTo(30, 500, 40, 450);
+          cvs.lineTo(40, 450);
+          cvs.lineTo(50, 350);
+          cvs.lineTo(50, 350);
+          cvs.quadraticCurveTo(70, 300, 130, 300);
+          cvs.lineTo(0, 300);
+          cvs.closePath();
+          cvs.fillStyle = "purple";
+          cvs.fill();
 
-          //頭
+          var grad2 = cvs.createRadialGradient(150, 180, 0, 140, 220, 60);
+          grad2.addColorStop(0, "purple");
+          grad2.addColorStop(1, "black");
 
-          //セリフ
-          document.body.onclick = function () {
-            document.getElementById("text").innerHTML = "クリリン";
+          cvs.beginPath();
+          cvs.arc(140, 220, 60, 0, Math.PI * 2, false);
+          cvs.fillStyle = grad2;
+          cvs.fill();
+
+          canvas.onclick = function () {
+            cvs.clearRect(0, 0, 1000, 100);
+            cvs.strokeStyle = "black";
+            cvs.font = "50pt serif";
+            cvs.strokeText("ビーム!!", 50, 100, 1000);
           };
-          document.body.ondblclick = function () {
-            document.getElementById("text").innerHTML = "ビーム";
+
+          canvas.ondblclick = function () {
+            cvs.clearRect(0, 0, 1000, 100);
+            cvs.strokeStyle = "black";
+            cvs.font = "50pt serif";
+            cvs.strokeText("ビームを受けた!", 50, 100, 1000);
           };
         }
       }
     </script>
   </head>
   <body onload="draw();">
-    クリックでセリフを表示
-    <br />
-    ダブルクリックセリフ２を表示
-    <p id="text"></p>
-    <canvas id="canvas1" width="1500" height="800"> </canvas>
+    クリックでセリフ１を表示<br />
+    ダブルクリックでセリフ２を表示<br />
+    <canvas id="canvas1" width="1000" height="800">
+      canvasを表示できません。
+    </canvas>
   </body>
 </html>

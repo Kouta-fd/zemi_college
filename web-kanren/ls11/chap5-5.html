@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>イベントサンプル</title>
+    <script>
+        function draw(){
+            var canvas = document.getElementById("canvas1")
+            var cvs = canvas.getContext("2d");
+
+            canvas.onclick = function(event){
+                cvs.clearRect(0,0,canvas.width,canvas.height);
+                cvs.beginPath();
+                cvs.arc(50,50,25,Math.PT*2,false);
+                cvs.stroke();
+            }
+            canvas.ondblclick = function(event){
+                cvs.clearRect(0, 0, canvas.width, canvas.height);
+                cvs.beginPath();
+                cvs.moveTo(25,25); cvs.lineTo(75,75);
+                cvs.moveTo(25,75); cvs.lineTo(75,75);
+                cvs.stroke();
+            }
+            
+        }
+    </script>
+</head>
+<body onload="draw();">
+    クリックすると○<br>
+    ダブルクリックすると×を表示します<br>
+    <canvas id="canvas1" width="100" height="100"></canvas>
+</body>
+</html>
